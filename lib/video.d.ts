@@ -1,6 +1,7 @@
 import HTML5Video from 'zombiebox/zb/device/common/HTML5-video';
 import Rect from 'zombiebox/zb/geometry/rect';
 import IViewPort from 'zombiebox/zb/device/interfaces/i-view-port';
+import MediaOption from './media-option';
 
 export default class Video extends HTML5Video {
   protected _mimeType: string | null;
@@ -18,35 +19,3 @@ export default class Video extends HTML5Video {
   static createStartTimeMediaOption(startTime: number): MediaOption;
   static serializeMediaOption(mediaOption: MediaOption): string;
 }
-
-export type MediaOption = {
-  mediaTransportType?: string;
-  option?: {
-    mediaFormat?: {
-      type?: string;
-    };
-    drm?: {
-      type?: string;
-      clientId?: string;
-      widevine?: {
-        separatedStream?: boolean;
-      };
-    };
-    transmission?: {
-      playTime?: {
-        start?: number;
-      };
-    };
-    adaptiveStreaming?: {
-      audioOnly?: boolean;
-      apativeResolution?: boolean;
-      seamlessPlay?: boolean;
-      maxWidth?: number;
-      maxHeight?: number;
-      bps?: {
-        start?: number;
-      };
-    };
-    mode3d?: string;
-  };
-};
