@@ -1,6 +1,6 @@
 import AbstractDevice from 'zombiebox/zb/device/abstract-device';
 import Rect from 'zombiebox/zb/geometry/rect';
-import StatefulHtml5Video from 'zombiebox/zb/device/common/stateful-html5-video';
+import StatefulHtml5Video from './stateful-html5-video';
 import Video from './video';
 
 export default class Device extends AbstractDevice {
