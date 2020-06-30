@@ -18,7 +18,7 @@ export default class StatefulHtml5Video extends BaseStatefulHtml5Video {
 	protected _init(): void;
 	protected _viewport: Viewport;
 	attachDRM(client: IDRMClient): void;
-	detachDRM(type: DRMType): void;
+	detachDRM(type: DRMType): Promise<any>;
 	destroy(): void;
 	static isDRMSupported(type: DRMType): boolean;
 }
