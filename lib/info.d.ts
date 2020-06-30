@@ -7,7 +7,7 @@ export default class Info extends AbstractInfo {
 	protected _systemInformation: SystemInformation;
 	type(): string;
 	manufacturer(): string;
-	serialNumber(): void;
+	serialNumber(): string;
 	model(): string;
 	version(): string;
 	softwareVersion(): string;
